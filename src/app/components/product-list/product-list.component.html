@@ -1,0 +1,11 @@
+<section class="list">
+    <section class="list__title">
+        <p>{{ title }}</p>
+
+    </section>
+    <app-loading [hidden]="!loading"></app-loading>
+
+    <section class="list__body">
+        <app-product-card *ngFor="let product of products" [item]="product"></app-product-card>
+    </section>
+</section>

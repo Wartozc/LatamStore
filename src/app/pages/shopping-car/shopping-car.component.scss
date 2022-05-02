@@ -1,0 +1,49 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 4rem;
+    flex-flow: wrap;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.table {
+    width: 100%;
+    @include respond-to("medium") {
+        width: 60%;
+    }
+}
+
+th {
+    text-align: center;
+    border-bottom: 1px solid black;
+    color: $emphasis;
+}
+
+td {
+    text-align: center;
+}
+
+.title {
+    text-align: left;
+}
+
+span {
+    cursor: pointer;
+}
+
+img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+}
+
+hr {
+    height: 1px;
+    border: solid 1px black;
+}
+
+.total {
+    font-size: 1.5rem;
+}

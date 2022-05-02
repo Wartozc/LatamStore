@@ -1,0 +1,24 @@
+<main class="main__page">
+    <section>
+        <app-slider>
+            <app-main-image></app-main-image>
+
+            <app-main-image></app-main-image>
+        </app-slider>
+    </section>
+
+    <app-images></app-images>
+    <section class="slider__title">
+        <p> Productos más buscados</p>
+    </section>
+    <section *ngIf="isLoading">
+        <app-loading></app-loading>
+    </section>
+    <section *ngIf="!isLoading">
+        <article>
+            <app-slider class="container:mobile" style="justify-content: center; padding-left: 1rem" [breakPoints]="true">
+                <app-product-card *ngFor="let product of popularProducts" [item]="product" class="product"></app-product-card>
+            </app-slider>
+        </article>
+    </section>
+</main>

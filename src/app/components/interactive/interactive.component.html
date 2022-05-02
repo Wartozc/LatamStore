@@ -1,0 +1,34 @@
+<section class="interactive">
+    <section class="interactive__main">
+        <article class="interactive__container">
+            <section class="interactive__products--list">
+                <ol>
+                    <li *ngFor="let product of api.productsCart">
+                        <section class="car">
+                            <p class="car__products">
+                                {{ product.title }}
+                            </p>
+                            <article class="car__products--items">
+                                <span><img [src]="product.thumbnail" alt="" /></span>
+                                <span>
+                  <p>
+                    <b>{{ product.price | currency }}</b>
+                  </p>
+                </span>
+                                <span>
+                  <p>Qty: {{ product.quantity }}</p>
+                </span>
+                            </article>
+                        </section>
+                    </li>
+                </ol>
+            </section>
+            <img src="../assets/images/icon-cart.svg" alt="icono carrito de compras" (click)="verShoppingCar()" />
+            <span for="img" class="interactive__container--products">
+        {{ api.productsCart.length }}
+      </span>
+        </article>
+    </section>
+
+    <app-sesion></app-sesion>
+</section>

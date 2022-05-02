@@ -1,0 +1,21 @@
+<main>
+  <app-product-list
+    [title]="title"
+    [loading]="isLoading"
+    [products]="products"
+  ></app-product-list>
+
+  <section *ngIf="!isLoading" class="navegation">
+    <button *ngIf="page > 1" (click)="previousPage()" class="navegation__buton">
+      <img src="../../../assets/images/Trazado 49.svg" alt="" />
+    </button>
+
+    <button
+      *ngIf="hasMoreProducts"
+      (click)="nextPage()"
+      class="navegation__buton"
+    >
+      <img src="../../../assets/images/Trazado 50.svg" alt="" />
+    </button>
+  </section>
+</main>

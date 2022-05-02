@@ -1,0 +1,20 @@
+<button class="menu-mobile__button" (click)="toggle()">
+  <span class="material-icons menu-mobile__icon"> menu </span>
+</button>
+
+<aside class="menu-mobile__container" [ngClass]="{ 'menu-mobile__container--open': showMenu }">
+    <header class="menu-mobile__header">
+        <button class="menu-mobile__close-button" (click)="toggle()">
+      <span class="material-icons-round menu-mobile__close-icon"> close </span>
+    </button>
+    </header>
+
+    <ul class="menu-mobile__list">
+        <li class="menu-mobile__list-item" (click)="goTo('hombre')">Hombre</li>
+        <li class="menu-mobile__list-item" (click)="goTo('mujer')">Mujer</li>
+        <li class="menu-mobile__list-item" (click)="goTo('junior')">Junior</li>
+        <li class="menu-mobile__list-item" (click)="goTo('niños')">Niños</li>
+        <li class="menu-mobile__list-item" (click)="goTo('accesorios')">Accesorios</li>
+        <li class="menu-mobile__list-item" (click)="goTo('ofertas')">Ofertas</li>
+    </ul>
+</aside>

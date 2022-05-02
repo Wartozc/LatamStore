@@ -1,0 +1,16 @@
+<form class="search" (submit)="onSend()">
+    <input type="text" class="search-input" placeholder="Buscar aquí producto" name="keyword" [(ngModel)]="keyword" />
+
+    <button class="search-button" type="submit">
+    <img
+      class="header__search-button-image"
+      src="../assets/images/Icon ionic-ios-search.svg "
+      alt="botón buscar "
+    />
+  </button>
+</form>
+<section *ngIf="emptyWord" class="empty">
+    <p>
+        El campo para buscar no puede estar en blanco, por favor, escriba un producto correcto
+    </p>
+</section>

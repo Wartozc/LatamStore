@@ -1,0 +1,14 @@
+.user {
+    column-gap: 2rem;
+    cursor: pointer;
+    display: flex;
+    &-button {
+        background-color: #dedede;
+        border-radius: none;
+        border: none;
+        cursor: pointer;
+        height: 3.625rem;
+        outline: none;
+        width: 6.5rem;
+    }
+}

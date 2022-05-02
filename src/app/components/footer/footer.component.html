@@ -1,0 +1,50 @@
+<footer class="footer">
+    <section class="footer__container">
+        <section class="footer__container--politics">
+            <p (click)="changePolitic()">POLÍTICAS
+                <span [hidden]="politic"><b>+</b></span>
+            </p>
+
+            <ul [hidden]="!politic">
+                <li>Políticas de privacidad</li>
+                <li>Políticas de cambio</li>
+                <li>Políticas de envío</li>
+                <li>Términos y condiciones</li>
+                <li>Responsabilidad social</li>
+            </ul>
+
+        </section>
+        <hr class="line">
+
+        <section class=" footer__container--about ">
+            <p (click)="changeAbout()">SOBRE NOSOTROS
+                <span [hidden]="about"><b>+</b></span>
+
+            </p>
+            <ul [hidden]="!about">
+                <li>Encuentra tu tienda</li>
+                <li>Contáctanos</li>
+                <li>Trabaja con Nosotros</li>
+            </ul>
+
+        </section>
+        <hr class="line">
+        <section class="footer__container--social ">
+            <p (click)="changeSocial()">SÍGUENOS EN
+                <span [hidden]="social"><b>+</b></span>
+
+            </p>
+            <div [hidden]="!social">
+                <section class="footer__container--social-media">
+                    <img src="../../../assets/images/Grupo 179.svg" alt="Facebook ">
+                    <img src="../../../assets/images/icon-twitter.png " alt="Twitter ">
+                    <img src="../../../assets/images/icon-instagram.png " alt="Instagram ">
+                    <img src="../../../assets/images/icon-youtube.png " alt="Youtube ">
+                </section>
+            </div>
+        </section>
+    </section>
+
+    <hr class="last-line">
+    <p class="copy"> © Copyright Colombia. Todos los derechos reservados </p>
+</footer>

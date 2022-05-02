@@ -1,0 +1,21 @@
+.nav {
+    align-items: center;
+    background-color: black;
+    display: flex;
+    height: 6.25rem;
+    justify-content: center;
+    min-height: 6.25rem;
+    &__link {
+      color: white;
+      cursor: pointer;
+        font-size: 2rem;
+        margin: 0 2.5rem;
+        text-transform: capitalize !important;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    &__separator {
+        border-left: 1px solid white;
+        width: 1px;
+        height: 2.5rem;
+    }
+}

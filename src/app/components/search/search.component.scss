@@ -1,0 +1,59 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+.search {
+    flex: 0 0 100%;
+    display: flex;
+    width: 100%;
+    order: 99; // last
+    @include respond-to("large") {
+        flex: 1 1 auto;
+        max-width: 650px;
+        order: initial;
+        padding: 0 1rem;
+    }
+    &-input {
+        background-color: #eeeeee;
+        border-radius: none;
+        border: none;
+        height: 3.625rem;
+        font-size: 1.25rem;
+        outline: none;
+        padding: 0px 1rem;
+        width: 100%;
+    }
+    &-button {
+        background-color: #dedede;
+        border-radius: none;
+        border: none;
+        height: 3.625rem;
+        outline: none;
+        width: 6.5rem;
+        cursor: pointer;
+        &-image {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}
+
+a {
+    text-decoration: dotted;
+    cursor: pointer;
+}
+
+.empty {
+    position: relative;
+    left: 0;
+    top: -11rem;
+    background-color: rgba($emphasis, .2);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: .7rem;
+    border-radius: 5%;
+    @include respond-to('medium') {
+        position: absolute;
+        left: 40%;
+        top: 0;
+    }
+}

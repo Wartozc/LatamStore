@@ -1,0 +1,81 @@
+@import "../../../app/scss/variables";
+@import "../../../app/scss/mixins";
+.product-card {
+    border: 1px solid $gray;
+    height: 35rem;
+    width: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    @include respond-to("medium") {
+        justify-content: center;
+        width: 21.5rem;
+        margin-left: 2rem;
+    }
+    &__header {
+        position: relative;
+        height: 21rem;
+        width: 100%;
+    }
+    &__badge {
+        align-items: center;
+        background-color: $emphasis;
+        color: $secondary;
+        display: flex;
+        font-size: 1.25rem;
+        font-weight: bold;
+        height: 2rem;
+        justify-content: center;
+        left: 1rem;
+        position: absolute;
+        top: 1rem;
+        width: 4rem;
+    }
+    &__image {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+    }
+    &__content {
+        display: grid;
+        background-color: $gray;
+        grid-template-rows: 1fr 1.5rem 3rem;
+        grid-template-areas: "title" "prices" "actions";
+        row-gap: 0.85rem;
+        height: 14rem;
+        padding: 1.25rem 2.25rem;
+        width: 100%;
+        white-space: normal;
+    }
+    &__title {
+        font-family: "HelveticaNeue";
+        font-size: 1.5rem;
+    }
+    &__prices {
+        font-size: 1.5rem;
+        display: grid;
+        grid-template-columns: max-content max-content;
+        grid-area: "title";
+        justify-content: space-between;
+    }
+    &__price {
+        color: $emphasis;
+        grid-area: "prices";
+        font-weight: bold;
+    }
+    &__discount {
+        color: $tertiary;
+        text-decoration: line-through;
+    }
+    &__actions {
+        grid-area: "actions";
+    }
+    &__button {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 1.25rem;
+    }
+}
+

@@ -1,0 +1,32 @@
+<section class="container">
+    <table class="table">
+        <tr>
+            <th><b>Imagen</b></th>
+            <th><b>Producto</b></th>
+            <th><b>Precio</b></th>
+            <th><b>Cantidad</b></th>
+            <th><b>Descartar</b></th>
+        </tr>
+
+        <tr *ngFor="let producto of mercadoService.productsCart">
+            <td><img [src]="producto.thumbnail" alt="" /></td>
+            <td class="title">{{producto.title}}</td>
+            <td>{{producto.price | currency}}</td>
+            <td>{{producto.quantity}}</td>
+            <td><span (click)="mercadoService.disToCart(producto)">&#9940;</span></td>
+
+        </tr>
+        <tr class="total">
+            <td><b>Total</b></td>
+            <td></td>
+            <td>
+                <b>{{mercadoService.total | currency}}</b>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+
+
+</section>

@@ -1,0 +1,36 @@
+@import "../../scss/mixins";
+.header {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    width: 100%;
+    @include respond-to("large") {
+        flex-wrap: nowrap;
+        height: 8rem;
+        padding: 1rem 4rem;
+    }
+    &__no-computer {
+        display: block;
+        @include respond-to("large") {
+            display: none;
+        }
+    }
+    &__title {
+        align-items: center;
+        display: flex;
+        font-family: "Bebas Neue";
+        font-size: 3rem;
+        margin: 0;
+        cursor: pointer;
+        text-transform: lowercase!important;
+        &::before {
+            content: "cs";
+            @include respond-to("small") {
+                content: "ClothesStore";
+            }
+        }
+    }
+}

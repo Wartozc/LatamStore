@@ -1,0 +1,26 @@
+@import "../../scss/mixins";
+.list {
+    &__title {
+        text-align: center;
+        font-size: 3rem;
+        padding-bottom: -2rem;
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        row-gap: 1rem;
+        @include respond-to("medium") {
+            display: flex;
+            flex-direction: row;
+            column-gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+}
+
+p {
+    padding: 0rem;
+    margin: 0rem;
+}

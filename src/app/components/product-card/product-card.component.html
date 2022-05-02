@@ -1,0 +1,38 @@
+<section class="product-card">
+  <section class="product-card__header">
+    <span [hidden]="discount == 0">
+      <span class="product-card__badge"> {{ discount }}%</span>
+    </span>
+
+    <img
+      [src]="product.thumbnail"
+      [alt]="product.title"
+      ngClass="product-card__image"
+    />
+  </section>
+
+  <section class="product-card__content">
+    <header class="product-card__title">
+      {{ product.title }}
+    </header>
+
+    <article class="product-card__prices">
+      <span class="product-card__price">{{ product.price | currency }}</span>
+
+      <span class="product-card__discount">
+        {{ product.original_price | currency }}
+      </span>
+    </article>
+
+    <footer class="product-card__actions">
+      <button
+        class="button button--filled product-card__button"
+        (click)="addProducts()"
+      >
+        <span class="material-icons-outlined">shopping_cart</span>
+
+        Agregar al carrito
+      </button>
+    </footer>
+  </section>
+</section>

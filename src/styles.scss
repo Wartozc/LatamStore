@@ -1,0 +1,106 @@
+@import "./app/scss/variables";
+@import '~@glidejs/glide/src/assets/sass/glide.core';
+@import '~@glidejs/glide/src/assets/sass/glide.theme';
+@import "./app/scss/mixins";
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+app-root {
+    font-family: "HelveticaNeue-Bold", "Bebas Neue";
+    margin: 0;
+    font-size: 16px;
+    height: 100%;
+}
+
+app-root {
+    display: flex;
+    flex-flow: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    .no-mobile {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1023px) {
+    .no-tablet {
+        display: none !important;
+    }
+}
+
+.button {
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem;
+    min-height: 2.5rem;
+}
+
+.button--filled {
+    font-family: "HelveticaNeue";
+    background-color: $primary;
+    border: none;
+    color: $secondary;
+}
+
+.button--outlined {
+    width: auto;
+    border: 1px solid $primary;
+    background-color: $secondary;
+}
+
+.button--one-line {
+    white-space: nowrap;
+}
+
+.page__content {
+    padding: 1rem 2rem;
+}
+
+.#{$glide-class} {
+    box-sizing: border-box;
+    $this: &;
+    $se: $glide-element-separator;
+    $sm: $glide-modifier-separator;
+    &#{$se}arrow {
+        color: $tertiary;
+        font-size: 6rem;
+        visibility: hidden;
+        &#{$sm}left {
+            left: 0;
+            &::before {
+                content: "<";
+                visibility: visible;
+                opacity: .2;
+                border: 1px solid;
+                border-color: rgba($color: $tertiary, $alpha: .3);
+                float: left;
+                @include respond-to("medium") {
+                    float: left;
+                }
+            }
+        }
+        &#{$sm}right {
+            right: 0;
+            &::after {
+                content: ">";
+                visibility: visible;
+                opacity: .2;
+                border: 1px solid;
+                border-color: rgba($color: $tertiary, $alpha: .3);
+                position: absolute;
+                right: 1rem;
+                @include respond-to("medium") {
+                    right: 1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+.interactive {
+    align-items: center;
+    display: flex;
+    column-gap: 2rem;
+    cursor: pointer;
+    &__container {
+        align-items: center;
+        position: relative;
+        height: 3.5rem;
+        display: flex;
+        &--products {
+            position: absolute;
+            transform: translate(30%, -50%);
+            right: 0;
+            top: 0;
+        }
+    }
+    &__container--products {
+        background-color: $emphasis;
+        height: 1.7rem;
+        border-radius: 50%;
+        color: #fff;
+        text-align: center;
+        z-index: 1;
+        width: 1.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 1.1rem;
+        top: .6rem;
+    }
+    &__main {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: right;
+    }
+    &__products--list {
+        display: none;
+        background-color: $gray;
+        float: 5rem;
+        width: 15rem;
+        position: absolute;
+        margin: 0;
+        text-align: left;
+        top: 100%;
+        right: 0;
+        z-index: 99;
+        border-radius: 1rem;
+        color: $emphasis;
+        font-family: 'Times New Roman', Times, serif;
+        width: 19rem;
+        @include respond-to("medium") {
+            left: 0;
+            right: unset;
+        }
+    }
+}
+
+.interactive__container:hover .interactive__products--list {
+    display: block;
+}
+
+.car {
+    display: flex;
+    flex-direction: column;
+    &__products {
+        width: 100%;
+        text-align: center;
+        &--items {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+    span {
+        width: 9.5rem;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        p {
+            align-items: center;
+        }
+    }
+    img {
+        width: 4rem;
+        height: 3rem;
+        object-fit: cover;
+    }
+}

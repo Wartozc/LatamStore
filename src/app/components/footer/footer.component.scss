@@ -1,0 +1,133 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+.footer {
+    margin-top: auto;
+    width: 100%;
+    color: $secondary;
+    background-color: $primary;
+    text-align: center;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
+        @include respond-to("medium") {
+            display: flex;
+            flex-direction: row;
+            padding-bottom: 2rem;
+        }
+        &--politics,
+        &--about,
+        &--social {
+            width: 100%;
+            margin-top: 0;
+            padding: 0;
+            text-align: center;
+            padding: 0 0;
+            @include respond-to("medium") {
+                width: 30%;
+                padding: 0 3rem;
+                margin-top: 6rem;
+            }
+            & ul li {
+                padding-left: 3rem;
+                @include respond-to("medium") {
+                    padding-left: 0;
+                }
+            }
+        }
+        &--social-media {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        &--politics {
+            margin-top: 6rem;
+            @include respond-to("medium") {
+                margin-top: 6rem;
+            }
+        }
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.6rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    color: $gray;
+    padding: .5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    text-align: left;
+    padding-left: 3rem;
+    color: $secondary;
+    font-size: 2rem;
+    position: relative;
+    margin: .5rem 0;
+    padding-bottom: 1rem;
+    @include respond-to("medium") {
+        padding-left: 0;
+        padding-bottom: 2rem;
+    }
+}
+
+img {
+    width: auto;
+    height: auto;
+}
+
+hr {
+    border: 1px solid $gray;
+    border-top: -50px;
+    width: 95%;
+}
+
+span {
+    padding-left: 60%;
+    position: absolute;
+    top: 0;
+    font-size: 2rem;
+    display: flex;
+    @include respond-to("medium") {
+        display: none;
+    }
+}
+
+.line {
+    display: flex;
+    @include respond-to("medium") {
+        display: none;
+    }
+}
+
+.last-line {
+    display: none;
+    @include respond-to("medium") {
+        display: inline-flex;
+    }
+}
+
+.copy {
+    text-align: center;
+    color: $gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 4rem 0 2rem 0;
+    font-size: .8rem;
+    @include respond-to("medium") {
+        font-size: 1.6rem;
+    }
+}
